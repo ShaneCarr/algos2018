@@ -70,40 +70,6 @@ namespace kadaneAlgorithm
             }
 
             return currentMax;
-            ////int currentMax = 0;
-
-            ////for(int i = 0; i < arrayToFindMaxSequence.Length; i++)
-            ////{
-            ////    if (i == 0)
-            ////    {
-            ////        currentMax = arrayToFindMaxSequence[i];
-            ////    }
-            ////    // cover negative case: they only accrue if they are "bigger than the currnet max otherwise we ignore them"
-            ////    else if(arrayToFindMaxSequence[i] < 0 )
-            ////    {
-            ////        if(currentMax < arrayToFindMaxSequence[i])
-            ////        {
-            ////            currentMax = arrayToFindMaxSequence[i];
-            ////        }
-            ////    }
-            ////    // postitive case: we want to collect these as logn as we can, and not add if it reduces (but we already took care of that)
-            ////    else
-            ////    {
-            ////        if(arrayToFindMaxSequence[i] + currentMax > currentMax)
-            ////        {
-            ////            // handle the transition
-            ////            if(currentMax < 0)
-            ////            {
-            ////                currentMax = 0;
-            ////            }
-
-            ////            currentMax += arrayToFindMaxSequence[i]; 
-            ////        }
-            ////    }
-            ////}
-
-
-            ////return currentMax;
         }
     }
 }
