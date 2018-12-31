@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace kadaneAlgorithm
+namespace algos
 {
     [TestClass]
     public class kadaneAlgorithm
