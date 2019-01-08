@@ -50,6 +50,7 @@
     <Compile Include="kadaneAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sort\012Nominal.cs" />
+    <Compile Include="sort\mergeSort.cs" />
     <Compile Include="sort\quickSort.cs" />
     <Compile Include="squareRoot.cs" />
   </ItemGroup>

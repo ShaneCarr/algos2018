@@ -45,29 +45,34 @@ namespace algos.sort
         public static void merges(int [] a, int start, int middle, int end, int[] b)
         {
             int leftPtr = start;
-            int rightPtr = end;
+            int rightPtr = middle;
 
+            // go though each iem in array. 
             for(int k = start; k < end; k++)
             {
-                if (leftPtr < middle && (rightPtr < end || a[leftPtr] > b[rightPtr]))
+                // while there are items to consume in left. 
+                // put in left if there are no items from the right
+                // or the left is smaller
+                if (leftPtr < middle && (rightPtr >= end || a[leftPtr] <= b[rightPtr]))
                 {
-                    b[k] = a[rightPtr];
+                    b[k] = a[leftPtr];
                     leftPtr++;
                 }
                 else
                 {
-                    b[k] = a[leftPtr];
+                    // otherwise put item from right right.
+                    b[k] = a[rightPtr];
                     rightPtr++;
                 }
             }
         }
 
-        public copyAToBByIndex(int[] a, int[] b, int start, int end)
-        {
-            for(int i =start; i < end; i++)
-            {
-                b[i] = a[i];
-            }
-        }
+        ////public copyAToBByIndex(int[] a, int[] b, int start, int end)
+        ////{
+        ////    for(int i =start; i < end; i++)
+        ////    {
+        ////        b[i] = a[i];
+        ////    }
+        ////}
     }
 }
