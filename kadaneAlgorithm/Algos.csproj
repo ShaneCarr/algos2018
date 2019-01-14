@@ -46,13 +46,20 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="nextgreatestNumberInArray.cs" />
-    <Compile Include="kadaneAlgorithm.cs" />
+    <Compile Include="datastructures\Heap\KsmallestItemInsortedMatrix.cs" />
+    <Compile Include="datastructures\Heap\minheap.cs" />
+    <Compile Include="datastructures\tree\avlTree.cs" />
+    <Compile Include="datastructures\tree\binaryTree.cs" />
+    <Compile Include="datastructures\tree\heightTree.cs" />
+    <Compile Include="datastructures\tree\redblackTree.cs" />
+    <Compile Include="datastructures\ArrayAndMatrixOperations\nextgreatestNumberInArray.cs" />
+    <Compile Include="puzzle\kadaneAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="search\binarySearch.cs" />
     <Compile Include="sort\012Nominal.cs" />
     <Compile Include="sort\mergeSort.cs" />
     <Compile Include="sort\quickSort.cs" />
-    <Compile Include="squareRoot.cs" />
+    <Compile Include="search\squareRoot.cs" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
