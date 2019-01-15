@@ -1,35 +1,49 @@
 ﻿data structures
 -tree
--hash table
+-hash table (review keys and probing like quadratic etc)
 -tree
   height of tree
+  traversals 
+  avl /redblack simple binary
+
 -list
+  rotation
 -array
+  play with multi dimenciional arrays
 -heap
+  min/max heap
 -graph
+  detect cycles
+  navigate
 
 algorithms
 -search
+-review categories of search
+- merge, quick
+-timsort
+-radix sort
+-heap sort
+-http://bigocheatsheet.com/
+
 -sort
 
-Check:
+Projects:  (algorithms + sorting)
 - rubix cube
 - go
 -chess
 -sudokiu
-
-napsack
+-napsack
 -travel sales men
 -np complete, p, np hard
 
 
 math
 -combinatorics
-
 - recursive/recusions
-- nchoose k
+- nchoose k (probablility reivew)
 - matrix
-
+- linear algebra
+-calc
 
 operating system
 -concurrence
@@ -53,10 +67,13 @@ search
 perf
 -time and space requirements
 -complexity (theta, bigo little o etc.): base case, worst case both etc.
-
+-http://bigocheatsheet.com/
 
 encryption and security
 - 
 
-
+languages
+- Garbage collection/managed unmanaged.
+- go over assembly
+- memory management
 
