@@ -11,17 +11,29 @@ namespace peakfinding
     /// if all same peak (
     /// 
     /// values don't need to be sorted.
+    /// 
+    /// inspriation from this slide https://courses.csail.mit.edu/6.006/spring11/lectures/lec02.pdf
+    /// slide is useful because nice little refresh on complexity 
     /// </summary>
     [TestClass]
     public class binarySearch
     {
         [TestMethod]
-        public void squareRoot()
+        public void peakMine()
         {
             // only 9 is peak
             int[] values = { 1, 9, 7, 6, 5 };
             var result = BinarySearch.FindPeak(values, values.Length - 1, 0);
-            Assert.AreEqual(result, result);
+            Assert.AreEqual(9, result);
+        }
+
+        [TestMethod]
+        public void peakFromOnlineExample()
+        {
+            // only 9 is peak
+            int[] values = { 1, 2, 6, 5, 3, 7, 4};
+            var result = BinarySearch.FindPeak(values, values.Length - 1, 0);
+            Assert.AreEqual(6, result);
         }
     }
 
