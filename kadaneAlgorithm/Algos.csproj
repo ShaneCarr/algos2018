@@ -46,6 +46,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="algorithm\peakfinding\peakfinding.cs" />
+    <Compile Include="algorithm\peakfinding\2darrayPeakFinding.cs" />
     <Compile Include="datastructures\Heap\KsmallestItemInsortedMatrix.cs" />
     <Compile Include="datastructures\Heap\minheap.cs" />
     <Compile Include="datastructures\tree\avlTree.cs" />
@@ -53,13 +55,22 @@
     <Compile Include="datastructures\tree\heightTree.cs" />
     <Compile Include="datastructures\tree\redblackTree.cs" />
     <Compile Include="datastructures\ArrayAndMatrixOperations\nextgreatestNumberInArray.cs" />
+    <Compile Include="puzzle\findTwoNumbersThatEqualASumInListOfNumbers.cs" />
+    <Compile Include="puzzle\firstRecurringCharacterInString.cs" />
     <Compile Include="puzzle\kadaneAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="search\binarySearch.cs" />
+    <Compile Include="algorithm\search\binarySearch.cs" />
     <Compile Include="sort\012Nominal.cs" />
     <Compile Include="sort\mergeSort.cs" />
     <Compile Include="sort\quickSort.cs" />
-    <Compile Include="search\squareRoot.cs" />
+    <Compile Include="algorithm\search\squareRoot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="datastructures\Needs.txt" />
+    <Content Include="DesignQuestions\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ai\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
