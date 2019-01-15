@@ -1,0 +1,62 @@
+﻿data structures
+-tree
+-hash table
+-tree
+  height of tree
+-list
+-array
+-heap
+-graph
+
+algorithms
+-search
+-sort
+
+Check:
+- rubix cube
+- go
+-chess
+-sudokiu
+
+napsack
+-travel sales men
+-np complete, p, np hard
+
+
+math
+-combinatorics
+
+- recursive/recusions
+- nchoose k
+- matrix
+
+
+operating system
+-concurrence
+-semaphore/resource allication etc
+-thread
+-context switching
+-scheduling
+
+
+system design
+- twitter/instance
+-microservices
+-class hierarchy
+-design constraints
+
+search
+-understand how search works google might be a good example
+
+
+
+perf
+-time and space requirements
+-complexity (theta, bigo little o etc.): base case, worst case both etc.
+
+
+encryption and security
+- 
+
+
+
