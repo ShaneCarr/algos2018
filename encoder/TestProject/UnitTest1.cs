@@ -17,6 +17,16 @@ namespace TestProject
             Assert.AreEqual(outputExpected, outputActual);
         }
 
+        [TestMethod]
+        public void testBase2()
+        {
+            string input = "abc10[a]3[b]";
+            string outputExpected = "abcaaaaaaaaaabbb";
+
+            string outputActual = decodeEncoded(0, input.Length - 1, input.ToCharArray());
+
+            Assert.AreEqual(outputExpected, outputActual);
+        }
 
         public static string decodeEncoded(int start, int end, char[] encoded)
         {
