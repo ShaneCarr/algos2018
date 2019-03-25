@@ -29,12 +29,12 @@ namespace TestProject
         }
 
         public static string decodeEncoded(int start, int end, char[] encoded)
-        {
-            //if(start == end)
-            //{
-            //    return string.Empty;
-            //}
-            
+        { 
+            if (!ParenChecker(encoded))
+            {
+                throw new ArgumentException("bad input parens don't match");
+            }
+
             // special brace character
             const char sP = '[';
             const char eP = ']';
@@ -100,7 +100,8 @@ namespace TestProject
                 // need to remove the numbers
                 if (!inBracketCollecting && cVal != sP && cVal != eP)
                 {
-                    bool skip = false;
+                    // skip numbers preceeding "directly" '['
+                    bool skipDigits = false;
 
                     // don't include the numbers that are used for encoding.
                     if (char.IsDigit(cVal))
@@ -117,43 +118,42 @@ namespace TestProject
                         // all numbers up to the sp.
                         if(encoded[lookAhead] == sP)
                         {
-                            skip = true;
+                            skipDigits = true;
 
                             // keep for loop adds one to index
                             currIndex = lookAhead -1;
                         }
                     }
 
-                    if (!skip)
+                    if (!skipDigits)
                     {
                         result += cVal.ToString();
                     }
                 }
             }
 
+            // retun collected chacters
             return result;
         }
 
-        private static int GetNumberOfTimesToDup(char[] encoded, int sInBracketSubstring, int start)
+        private static bool ParenChecker(char[] encoded)
         {
-            // points to [, go back one to number or character.
-            int digitIndex = sInBracketSubstring - 1;
+            int parenCount = 0;
 
-            // points to first number, maybe, assume could be a string too then do nothing. 
-            digitIndex = digitIndex--;
-            string encodeDigits = "";
-
-            while (char.IsDigit(encoded[digitIndex]) && digitIndex >= start)
+            for (int i=0; i < encoded.Length; i++)
             {
-                //abc10[a]
-                //0
-                //10
-                // then stop
-                encodeDigits.Insert(0, encoded[digitIndex].ToString());
-                digitIndex--;
+                if(encoded[i] == '[')
+                {
+                    parenCount++; 
+                }
+
+                if (encoded[i] == ']')
+                {
+                    parenCount--;
+                }
             }
 
-            return Convert.ToInt32(encodeDigits);
+            return parenCount == 0;
         }
     }
 }
