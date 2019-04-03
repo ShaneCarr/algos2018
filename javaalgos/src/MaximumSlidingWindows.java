@@ -19,24 +19,70 @@ class MaxSlidingWindow{
         Window w = new Window();
         w.Start =0;
         w.End = 0;
+        Integer startIndex = 0;
 
-        for(int i = 0; i< arr.length / windowSize; i++)
+        boolean windowSlides = true;
+        while(!GetWindowIndexes(
+                w,
+                windowSize,
+                startIndex,
+                arr.length - 1,
+                result,
+                arr))
         {
-            // get max array for element in window
-            // slide array forward.
+            startIndex++;
         }
 
         return result; // returning result
     }
 
-    public static Window GetWindowIndexes(Integer i)
+    /**
+     *
+     * @param w the current window
+     * @param maxArrayBound bounds
+     * @return should continue
+     */
+    public static boolean GetWindowIndexes(
+            Window w,
+            Integer windowSize,
+            Integer startIndex,
+            int maxArrayBound,
+            ArrayDeque<Integer> result,
+            int[] a)
     {
+        boolean doneOrNot = false;
+        Integer endIndexBound = 0;
+        Integer additionalSteps = windowSize - 1;
+        if(startIndex + additionalSteps >= maxArrayBound)
+        {
+            doneOrNot = true;
+            endIndexBound = maxArrayBound;
+        }
+        else
+        {
+            endIndexBound = startIndex + additionalSteps; // take one off the window size because we count current.
+        }
 
-        Window w = new Window();
-        w.End = 0;
-        w.Start = 0;
-        return w;
+        // 2 (windows bound comes from (3-1)
+        // 0, 2 -> 0,1,2
+        // 1, 2 -> 1,2,3
+        w.End = endIndexBound;
 
+        // 0
+        // 1
+        w.Start = startIndex;
+
+        Integer max = Integer.MIN_VALUE;
+
+        for(Integer i = w.Start; i <= w.End; i++) {
+            if(max < a[i])
+            {
+                max = a[i];
+            }
+        }
+
+        result.add(max);
+        return doneOrNot;
     }
 }
 
